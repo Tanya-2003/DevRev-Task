@@ -13,7 +13,7 @@
     transition: var(--transition);
 }
 .book-item:hover{
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    box-shadow: rgba(246, 16, 16, 0.15) 0px 5px 15px 0px;
 }
 .book-item-img img{
     max-width: 180px;
@@ -26,13 +26,15 @@
 .book-item-info-item.title{
     line-height: 1.4;
     margin-bottom: 0.8rem;
+    font-size: medium;
+    font-weight: 400;
 }
 .book-item-info-item.author{
     line-height: 1.4;
     margin-bottom: 4px;
 }
 .book-item-info-item:not(.book-item-info-item.title) span:last-child{
-    opacity: 0.8;
+    opacity: 500;
 }
 .book-item-info-item.publish-year{
     opacity: 0.6;

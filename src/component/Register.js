@@ -50,9 +50,6 @@ function Register() {
       setConfirmPassword('')
     }
 
-    
-
-
   return (
     <div className="app">
       <div className="Input-container-main">

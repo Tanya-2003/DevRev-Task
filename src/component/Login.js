@@ -12,8 +12,6 @@ import "./style.css";
 import { useAuthValue } from "./AuthContext"
 
 
-
-
 import "./style.css";
 
 
@@ -26,8 +24,6 @@ function Login
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const [value,setValue]=useState('')
-
-  
   
 const handleClick=()=>{
   console.log(currentUser)
@@ -60,28 +56,40 @@ const login = e => {
         history('/Home')
       })
       .catch(err=>alert(err.message))
-      
-      
+        
       // Sign-in successful, perform additional actions or redirect
     } catch (error) {
       console.error(error);
     }
   };
-      
-
-   
-  
+       
   return (
     <div>
         
-       
-            <h2 class="logo"><i class='bx bxl-xing' ></i>Library Management</h2>
+        <header className="header">
+      <nav className="navbar">
+        <a href="main.html" className="logo"></a>
+        <a href="main.html" className="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html" className="right">Login</a>
+      </nav>
+      <form action="#" className="search-bar">
+        <input type="text" placeholder="Search..." />
+        <button type="submit"><i className='bx bx-search-alt'></i></button>
+      </form>
+    </header>
+    <div class="background"></div>
+
+    <div class="container">
+        <div class="content">
+        <h2 class="logo"><box-icon type='logo' name='firebase'></box-icon>Nora's Nook</h2>
             
             <div class="text-sci">
-                <h2> Welcome!<br/><span>Login/SignUp</span></h2>
+                <h2> Welcome Book Worms!<br/><span>Login/SignUp</span></h2>
 
 
-                <p>Hello welcome and more</p><div>
+                <p>Let's get started</p><div>
                   <center>
                 <Button  variant ="outlined" width="100" onClick={handleGoogleSignIn}> <img src="https://cdn-icons-png.flaticon.com/128/300/300221.png" width={20} height={20}/>&nbsp;&nbsp; Sign In with Google</Button></center><br/><br/>
             <TextField id="outlined" label="Email address" value={email} onChange={(e)=>setEmail(e.target.value)}  />       <br/><br/>
@@ -92,19 +100,16 @@ const login = e => {
         
             </div>
             
-            
-
-
                 <div class="social-icons">
-                    <a href="#"><i class='bx bxl-facebook' ></i></a>
-                    <a href="#"><i class='bx bxl-twitter' ></i></a>
-                    <a href="#"><i class='bx bxl-instagram' ></i></a>
-                    <a href="#"><i class='bx bxl-linkedin' ></i></a>
+                    <a href="#"><box-icon name='facebook-circle' type='logo' ></box-icon></a>
+                    <a href="#"><box-icon name='twitter' type='logo' ></box-icon></a>
+                    <a href="#"><box-icon name='instagram-alt' type='logo' ></box-icon></a>
+                    <a href="#"><box-icon name='linkedin-square' type='logo' ></box-icon></a>
 
                 </div>
-        
-
-    </div>
+              </div>
+            </div>
+        </div> 
     </div>
   )
 }

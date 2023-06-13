@@ -1,15 +1,15 @@
 .search-form{
-    width: 100%;
-    max-width: 680px;
+    width: 50%;
+    max-width: 500px;
+    align-items: end;
 }
 .search-form-elem{
-    padding: 1.4rem 2.8rem;
-    border-radius: 3.8rem;
+    border-radius: 2.5rem;
 }
 .search-form-elem .form-control{
     font-size: 2rem;
-    padding: 0.6rem;
+    
 }
 .search-form-elem .form-control::placeholder{
-    opacity: 0.9;
+    background: transparent;
 }
